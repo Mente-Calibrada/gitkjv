@@ -134,4 +134,10 @@ The first edition of the KJV (1611) contained famous typographic artifacts. We a
 * **Versioning Model:** GitKJV
 * **Standard:** Enterprise-grade Open Source
 
+---
+
+## 🌐 Join the Community
+We invite developers, researchers, and faith scholars to contribute to this open-source ecosystem. Open an issue, submit a pull request, or help us refine the textual architecture of the KJV.
+
+
 Alantec - Arquitetos of the Future.
