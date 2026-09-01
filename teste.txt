@@ -1,0 +1,3 @@
+Sovereign KJV Test Validation File
+Status: Active
+Purpose: Integration and textual baseline check for KJV engine.
