@@ -1,3 +1,19 @@
-Sovereign KJV Test Validation File
-Status: Active
-Purpose: Integration and textual baseline check for KJV engine.
+import pytest
+from pydantic import BaseModel, ValidationError
+
+class SovereignModel(BaseModel):
+    id: str
+    status: str
+    verified: bool = True
+
+def test_sovereign_payload_valid():
+    """Verify standard payload initialization and validation."""
+    data = {"id": "KJV-001", "status": "active"}
+    payload = SovereignModel(**data)
+    assert payload.id == "KJV-001"
+    assert payload.verified is True
+
+def test_sovereign_payload_invalid_structure():
+    """Ensure strict schema failure on missing required fields."""
+    with pytest.raises(ValidationError):
+        SovereignModel(status="failed")
